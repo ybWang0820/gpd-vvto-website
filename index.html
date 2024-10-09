@@ -138,7 +138,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Caption. 
       </h2>
     </div>
   </div>
@@ -153,7 +153,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Video Virtual Try-On aims to transfer a garment onto a person in the video. 
+            Previous methods typically focus on image-based virtual try-on, but directly applying these methods to videos often leads to temporal discontinuity due to inconsistencies between frames.
+            Limited attempts in video virtual try-on also suffer from unrealistic results and poor generalization ability.
+            In light of previous research, we posit that the task of video virtual try-on can be decomposed into two key aspects: 
+            (1) single-frame results are realistic and natural, while retaining consistency with the garment;
+            (2) the person's actions and the garment are coherent throughout the entire video.
+            To address these two aspects, we propose a novel two-stage framework based on Latent Diffusion Model, namely Garment-Preserving Diffusion for Video Virtual Try-On (GPD-VVTO).
+            In the first stage, the model is trained on single-frame data to improve the ability of generating high-quality try-on images. 
+            We integrate both low-level texture features and high-level semantic features of the garment into the denoising network to preserve garment details while ensuring a natural fit between the garment and the person.
+            In the second stage, the model is trained on video data to enhance temporal consistency. 
+            We devise a novel Garment-aware Temporal Attention (GTA) module that incorporates garment features into temporal attention, enabling the model to maintain the fidelity to the garment during temporal modeling.
+            Furthermore, we collect a video virtual try-on dataset containing high-resolution videos from diverse scenes, addressing the limited variety of current datasets in terms of video background and human actions.
+            Extensive experiments demonstrate that our method outperforms existing state-of-the-art methods in both image-based and video-based virtual try-on tasks, indicating the effectiveness of our proposed framework.
           </p>
         </div>
       </div>
